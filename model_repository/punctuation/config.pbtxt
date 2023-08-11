@@ -1,0 +1,35 @@
+name: "punctuation"
+backend: "python"
+max_batch_size: 16
+input [
+{
+    name: "INPUT_TEXT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+},
+{
+    name: "LANG_ID"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+    reshape { shape: [] }
+}
+]
+
+output [
+{
+    name: "OUTPUT_TEXT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+}
+]
+
+dynamic_batching {
+    preferred_batch_size: [4, 8, 16]
+  }
+
+instance_group [
+{
+  count: 1
+  kind: KIND_CPU
+}
+]
