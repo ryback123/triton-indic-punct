@@ -35,14 +35,14 @@ class TritonPythonModel:
         self.all_punct = { 
             'hi': Punctuation('hi'),
             # 'gu': Punctuation('gu'),
-            # 'mr': Punctuation('mr'),
+            'mr': Punctuation('mr'),
             # 'pa': Punctuation('pa'),
-            # 'bn': Punctuation('bn'),
-            # 'or': Punctuation('or'),            
-            # 'ta': Punctuation('ta'),
-            # 'te': Punctuation('te'),
+            'bn': Punctuation('bn'),
+            'or': Punctuation('or'),            
+            'ta': Punctuation('ta'),
+            'te': Punctuation('te'),
             # 'kn': Punctuation('kn'),
-            # 'ml': Punctuation('en'),
+            'ml': Punctuation('en'),
             # 'ml': Punctuation('ml')
         }
 
